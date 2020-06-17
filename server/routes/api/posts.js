@@ -13,6 +13,7 @@ const postModel = require('../../models/postModel');
 
 //const app = express();
 
+
 /**
  * Get All
  */
@@ -25,6 +26,7 @@ app.get('/', async (req, res) => {
     res.status(500).send(err);
   }
 });
+
 
 /** 
  * Add Post
@@ -39,6 +41,23 @@ app.post('/add', async (req, res) => {
     res.status(500).send(err);
   }
 });
+
+
+/**
+ * Delete Post
+ */
+app.delete('/delete/:id', async (req, res) => {
+  try {
+    const post = await postModel.findByIdAndDelete(req.params.id)
+
+    if (!post) res.status(404).send("No ha trobat aquest item")
+    res.status(200).send()
+  } catch (err) {
+    res.status(500).send(err)
+  }
+});
+
+
 
 module.exports = app
 
