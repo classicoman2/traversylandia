@@ -30,7 +30,7 @@ if (process.env.NODE_ENV == 'production') {
   app.get(/.*/, (req, res) => res.sendFile(__dirname + '/public/index.html'));
 }
 
-const port = process.env.PORT || 5001;
+const port = process.env.PORT || 5000;
 
 //Iniciam el servidor
 app.listen(port, () => console.log(`Servidor iniciat a port ${port}`));
