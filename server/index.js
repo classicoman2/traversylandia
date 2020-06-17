@@ -21,9 +21,9 @@ app.use('/api/posts', posts);
 
 
 //PRODUCTION   NOMES!! -- xtoni
-if (process.env.NODE_ENV == 'production') {
+if (process.env.NODE_ENV === 'production') {
   //Static folder que hem creat en fer   npm run build
-  app.use(express.static(__dirname + '/public'));
+  app.use(express.static(__dirname + '/public/'));
 
   //Handle Single Page Application
   //qualsevol ruta -- xtoni
