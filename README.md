@@ -10,9 +10,9 @@ Full stack application using Vuejs+Expressjs+MongoDB+mLab+Heroku ... i crec que 
 ## Webgraphy
 1. Full Stack Vue.js, Express & MongoDB, Express API --> Heroku + mLab - TraversyMedia
   - [Part I: Servidor amb npm, Express, MongoDB allotjat a Atlas](https://www.youtube.com/watch?v=j55fHUJqtyw)
-  - Part II
-  - Part III
-  - Notes:
+  - [Part II: Front amb VUE CLI i una classe estàtica PostService.js per accedir a API de back](https://www.youtube.com/watch?v=X-JZ-QPApUs&t=1s)
+  - [Part III: Desplegar a HEROKU](https://www.youtube.com/watch?v=W-b9KGwVECs)
+  - Comentaris:
     - Presenta errades en connexió a Mongo, ja que +**mLab ha estat absorbit per Atlas MongoDB**. Però és una guia general molt bona per construir un _back_ amb Express, router api i MongoDB
 2. [CRUD Operations with Mongoose and MongoDB Atlas - Digital Ocean](https://www.digitalocean.com/community/tutorials/nodejs-crud-operations-mongoose-mongodb-atlas)
   - Amb `Mongoose` puc fer CRUD en un _back_ amb Express.js molt fàcilment

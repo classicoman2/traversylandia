@@ -20,6 +20,16 @@ const posts = require('./routes/api/posts');
 app.use('/api/posts', posts);
 
 
+//PRODUCTION   NOMES!! -- xtoni
+if (process.env.NODE_ENV == 'production') {
+  //Static folder que hem creat en fer   npm run build
+  app.use(express.static(__dirname + '/public'));
+
+  //Handle Single Page Application
+  //qualsevol ruta -- xtoni
+  app.get(/.*/, (req, res) => res.sendFile(__dirname + '/public/index.html'));
+}
+
 const port = process.env.PORT || 5001;
 
 //Iniciam el servidor
