@@ -3,6 +3,7 @@
 - Data inici: 15 Juny 2020
 - Descripció: Full stack application emprant Vue.js, Axios, Javascript asíncron i Express.js, ,amb desplegament a Heroku i Atlas MongoDB. La idea darrere aquest projecte és crear una BASE de model d'aplicació per tal de modificar-la més endavant i adaptar-la a un _front_ de Vanilla JS només. 
 Empra la llibreria AXIOS. 
+Desplegada a [https://agile-retreat-26891.herokuapp.com](https://agile-retreat-26891.herokuapp.com/)
 
 ## Webgrafia
 
@@ -56,4 +57,5 @@ En desplegar a Heroku, si volem que la petició a la api funcioni:
 ## TODO
 
 - [ ] La carpeta `/client` que conté el desenvolupament del front, està exclosa del repository general, ja que aquest està associat a Heroku i només hi pujam la versió _build_ volcada en carpeta `/server/public` --> convendria guardar-ho en un altre repositori separat per no perdre-ho.
+- [ ] CRUD no està acabat, ja que el _front_ només fa Get, i li hauriem d'afegir un get individual, add, delete i modify
 - [ ] Passar l'aplicació a **Docker**
