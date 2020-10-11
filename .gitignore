@@ -1,4 +1,1 @@
 node_modules
-
-# The client must go in another repository, not with the server
-/client
