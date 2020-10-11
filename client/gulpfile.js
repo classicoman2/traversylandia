@@ -13,6 +13,8 @@ const cssnano = require("cssnano");
  
 const del = require("del");
 
+//Si empro async o await en el JS, llavors se produira un error de regenatorRuntime si no faig això
+const regeneratorRuntime = require("regenerator-runtime");
 
 
 // To prevent rewriting the source and build folder locations
