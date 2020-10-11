@@ -24,7 +24,6 @@
   },
   "homepage": "https://github.com/classicoman2/traversylandia#readme",
   "dependencies": {
-    "axios": "^0.20.0",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
@@ -34,6 +33,7 @@
   "devDependencies": {
     "@babel/core": "^7.11.6",
     "@babel/preset-env": "^7.11.5",
+    "axios": "^0.20.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^8.1.0",
     "babel-polyfill": "^6.26.0",
