@@ -56,6 +56,6 @@ En desplegar a Heroku, si volem que la petició a la api funcioni:
 
 ## TODO
 
-- [ ] La carpeta `/client` que conté el desenvolupament del front, està exclosa del repository general, ja que aquest està associat a Heroku i només hi pujam la versió _build_ volcada en carpeta `/server/public` --> convendria guardar-ho en un altre repositori separat per no perdre-ho.
+- [ ] La carpeta `/client` que conté el desenvolupament del front, està exclosa del repository general, ja que aquest està associat a Heroku i només hi pujam la versió _build_ volcada en carpeta `/server/public` --> convendria guardar-ho en una branch anomenada _dev_
 - [ ] CRUD no està acabat, ja que el _front_ només fa Get, i li hauriem d'afegir un get individual, add, delete i modify
 - [ ] Passar l'aplicació a **Docker**
