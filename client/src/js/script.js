@@ -4,11 +4,11 @@ const url = "http://localhost:5000/api/posts";
 class PostService {
 
     //Get Posts
-    static async getPosts() {
+    static getPosts() {
         try {
-                const res = await fetch(url);
-                const data = await res.text();
-                mostraResultats(data);
+            fetch(url)
+            .then(response => response.json())
+            .then(data => mostraResultats(data));
             } catch (error) {
                 console.log('Error:' + error);
             }
@@ -17,7 +17,7 @@ class PostService {
 
 
 function mostraResultats(data) {
-    document.getElementById("resultats").innerHTML = data
+    document.getElementById("resultats").innerHTML = JSON.stringify(data);
 }
 
 
