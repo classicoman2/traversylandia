@@ -1,10 +1,10 @@
 # traversylandia
 
 - Data inici: 15 Juny 2020
-- Descripció: Full stack application emprant Vue.js, Axios, Javascript asíncron i Express.js, ,amb desplegament a Heroku i Atlas MongoDB. La idea darrere aquest projecte és crear una BASE de model d'aplicació per tal de modificar-la més endavant i adaptar-la a un _front_ de Vanilla JS només. 
-Empra la llibreria AXIOS. 
-Desplegada a [https://agile-retreat-26891.herokuapp.com](https://agile-retreat-26891.herokuapp.com/)
-
+- Data darrera mod: Oct 2020
+- Descripció: Full stack application emprant Javascript asíncron (Fetch) i Express.js, ,amb desplegament a Heroku i Atlas MongoDB.
+- Per veure on està desplegada, executar `heroku open`
+- La carpeta client està a `client` i se desplega fent `gulp build`a dins de `/server/public`
 ## Webgrafia
 
 1. Full Stack Vue.js, Express & MongoDB - TraversyMedia: tutorial que he seguit. He emprat _Mongoose_ per connectar a Mongo i Atlas MongoDB (que ha absorbit **mLab** des de Febrer 2019.
@@ -31,7 +31,6 @@ La collecion que estic emprant se diu vue_express.posts (vue_express és la BDD)
 
 4. Crear la database _vue_express_ i la Collection _posts_ des de COLLECTIONS
 
-
 ## Postman
 
 Estic fent peticions amb Postman, guardades a la Collection `traversymedia`. Aquestes collections estan guardades en el servidor de Postman i associades al meu usuari. 
@@ -41,12 +40,10 @@ Estic fent peticions amb Postman, guardades a la Collection `traversymedia`. Aqu
 ### Local
 
 - Front. 
-  - Dev: entrar a /client i executar  `npm run serve`. 
-  - Build: entrar a /client i executar `npm run build`. Segons configuració al fitxer `vue.config.js`, la carpeta build és a `/server/public`
+  - `gulp build` inserirà el front en la carpeta `/server/public`
 
 - Back.
   - Dev: entrar a /server i executar `npm run dev`
-  - Build: seguir les instruccions - molt clares i senzilles - de la Part III per desplegar a Heroku (són 4 o 5 comandes)
 
 ### Seguretat 
 
@@ -56,6 +53,4 @@ En desplegar a Heroku, si volem que la petició a la api funcioni:
 
 ## TODO
 
-- [ ] La carpeta `/client` que conté el desenvolupament del front, està exclosa del repository general, ja que aquest està associat a Heroku i només hi pujam la versió _build_ volcada en carpeta `/server/public` --> convendria guardar-ho en una branch anomenada _dev_
 - [ ] CRUD no està acabat, ja que el _front_ només fa Get, i li hauriem d'afegir un get individual, add, delete i modify
-- [ ] Passar l'aplicació a **Docker**
