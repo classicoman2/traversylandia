@@ -1,8 +1,4 @@
 
-
-// ECMAScript 2015
-import regeneratorRuntime from "regenerator-runtime";
-
 const url = "http://localhost:5000/api/posts";
 
 class PostService {
