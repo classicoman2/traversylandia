@@ -24,11 +24,12 @@
   },
   "homepage": "https://github.com/classicoman2/traversylandia#readme",
   "dependencies": {
+    "axios": "^0.20.0",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "mongodb": "^3.5.9",
-    "mongoose": "^5.9.19"
+    "mongodb": "^3.6.2",
+    "mongoose": "^5.10.9"
   },
   "devDependencies": {
     "@babel/core": "^7.11.6",
