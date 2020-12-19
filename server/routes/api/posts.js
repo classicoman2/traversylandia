@@ -1,12 +1,9 @@
 const express = require('express');
+const app = express();
 const mongodb = require('mongodb');
-
-//const router = express.Router();
-
-
 const mongoose = require('mongoose');
 
-const app = express();
+//const router = express.Router();
 
 // Model creat a /models/post.js  -- xtoni
 const postModel = require('../../models/postModel');

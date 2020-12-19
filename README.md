@@ -5,6 +5,7 @@
 - Descripció: Full stack application emprant Javascript asíncron (Fetch) i Express.js, ,amb desplegament a Heroku i Atlas MongoDB.
 - Per veure on està desplegada, executar `heroku open`
 - La carpeta client està a `client` i se desplega fent `gulp build`a dins de `/server/public`
+
 ## Webgrafia
 
 1. Full Stack Vue.js, Express & MongoDB - TraversyMedia: tutorial que he seguit. He emprat _Mongoose_ per connectar a Mongo i Atlas MongoDB (que ha absorbit **mLab** des de Febrer 2019.
@@ -16,7 +17,7 @@
 
 ## MongoDB
 
-La collecion que estic emprant se diu vue_express.posts (vue_express és la BDD) i se troba [aqui](https://cloud.mongodb.com/v2/5ee9d0575a47887e5979df91#metrics/replicaSet/5ee9d1c8fd94d31bbc6545b4/explorer/vue_express/posts/find)
+La collection que estic emprant se diu vue_express.posts (vue_express és la BDD) i se troba [aqui](https://cloud.mongodb.com/v2/5ee9d0575a47887e5979df91#metrics/replicaSet/5ee9d1c8fd94d31bbc6545b4/explorer/vue_express/posts/find)
 
 ### Atlas MongoDB
 

@@ -1,10 +1,10 @@
-/*
+
 // ECMAScript 2015
 
 //Necessari en executar Gulp i generar versió de producció a /server/public
 
 import regeneratorRuntime from "regenerator-runtime";
-*/
+
 
 //const url = "http://localhost:5000/api/posts";
 const url = "http://localhost:5000/api/cyclists";
