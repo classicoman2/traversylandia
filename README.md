@@ -1,10 +1,11 @@
 # traversylandia
 
 - Data inici: 15 Juny 2020
-- Data darrera mod: Oct 2020
+- Data darrera mod: 20 Des 2020
 - Descripció: Full stack application emprant Javascript asíncron (Fetch) i Express.js, ,amb desplegament a Heroku i Atlas MongoDB.
-- Per veure on està desplegada, executar `heroku open`
-- La carpeta client està a `client` i se desplega fent `gulp build`a dins de `/server/public`
+- Notes:
+  - Després de fer canvis, per desplegar fer `git push heroku master` i `heroku open`
+  - La carpeta client està a `client` i se desplega fent `gulp build`a dins de `/server/public`
 
 ## Webgrafia
 
@@ -17,7 +18,7 @@
 
 ## MongoDB
 
-La collection que estic emprant se diu vue_express.posts (vue_express és la BDD) i se troba [aqui](https://cloud.mongodb.com/v2/5ee9d0575a47887e5979df91#metrics/replicaSet/5ee9d1c8fd94d31bbc6545b4/explorer/vue_express/posts/find)
+La collection que estic emprant se diu uci_database.posts (uci_database és la BDD) i se troba [aqui](https://cloud.mongodb.com/v2/5ee9d0575a47887e5979df91#metrics/replicaSet/5ee9d1c8fd94d31bbc6545b4/explorer/vue_express/posts/find)
 
 ### Atlas MongoDB
 
@@ -30,7 +31,7 @@ La collection que estic emprant se diu vue_express.posts (vue_express és la BDD
 
     `mongodb+srv://dbUser:aquielmeuPassword@cluster0-tuhp5.mongodb.net/vue_express?retryWrites=true&w=majority`
 
-4. Crear la database _vue_express_ i la Collection _posts_ des de COLLECTIONS
+4. Creades la database _uci_database_ i la Collection _cyclists_ des de COLLECTIONS
 
 ## Postman
 
@@ -54,4 +55,10 @@ En desplegar a Heroku, si volem que la petició a la api funcioni:
 
 ## TODO
 
-- [ ] CRUD no està acabat, ja que el _front_ només fa Get, i li hauriem d'afegir un get individual, add, delete i modify
+- [ ] :bug En desplegament, no esborra perquè no agafa atribut `onclick` en HTML --> afegir dinàmicament amb `addEventListener()` en crear el llistat.
+- [ ] Millorar el formulari
+- [ ] CRUD no està acabat, de moment fa:
+    - Get all
+    - add
+    - delete
+- [ ] Emprar REST CLIENT (extensió de vscode) per guardar en un fitxer `.rest` les peticions a API
