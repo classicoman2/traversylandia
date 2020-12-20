@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express();
 
+const seguretat = require('./mongodb_atlas/seguretat');
+
 // No record per a què serveix --> investigar (pdt)  -- xtoni
 const bodyParser = require('body-parser');
 //Per evitar l'error de CORS en fer peticions des d'un altre servidor
@@ -51,6 +53,6 @@ mongoose.connect('mongodb+srv://dbUser:Qwert123@cluster0-tuhp5.mongodb.net/vue_e
 */
 
 // Base de dades 'uci_database'
-mongoose.connect('mongodb+srv://dbUser:Qwert123@cluster0-tuhp5.mongodb.net/uci_database?retryWrites=true&w=majority', {
+mongoose.connect(`mongodb+srv://${seguretat}@cluster0-tuhp5.mongodb.net/uci_database?retryWrites=true&w=majority`, {
   useNewUrlParser: true
 });
