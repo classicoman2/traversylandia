@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 
-const seguretat = require('./mongodb_atlas/seguretat');
+const seguretat = require('./mongodb_atlas_user/seguretat');
 
 // No record per a què serveix --> investigar (pdt)  -- xtoni
 const bodyParser = require('body-parser');
