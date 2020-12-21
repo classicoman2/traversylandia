@@ -6,7 +6,6 @@ const CyclistSchema = new mongoose.Schema({
     type: String,
     required: true,
     trim: true,
-    lowercase: true,
     validate(value) {
       if (value == "") throw new Error("El camp text no pot estar buid");
     },
@@ -15,7 +14,6 @@ const CyclistSchema = new mongoose.Schema({
     type: Date,
     required: true,
     trim: true,
-    lowercase: true,
     validate(value) {
       if (value == "") throw new Error("El camp text no pot estar buid");
     },
@@ -24,7 +22,6 @@ const CyclistSchema = new mongoose.Schema({
     type: Number,
     required: true,
     trim: true,
-    lowercase: true,
     validate(value) {
       if (value == "") throw new Error("El camp text no pot estar buid");
     },
@@ -33,13 +30,24 @@ const CyclistSchema = new mongoose.Schema({
     type: Number,
     required: true,
     trim: true,
-    lowercase: true,
     validate(value) {
       if (value == "") throw new Error("El camp text no pot estar buid");
     },
   },
 });
 
+/**
+ * Mètode que he creat jo, seguint  https://mongoosejs.com/docs/guide.html#statics
+ * Assigns a function to the "statics" object of an Schema
+ * 
+ * @param {string} name  Expressió regular a buscar
+ */
+CyclistSchema.statics.findByName = function(name) {
+  return this.find({ name: new RegExp(name, 'i') });
+};
+
+
 const Cyclist = mongoose.model("Cyclist", CyclistSchema);
 
+//exports
 module.exports = Cyclist;

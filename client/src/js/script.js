@@ -1,10 +1,9 @@
-
 // ECMAScript 2015
 
 //Necessari en executar Gulp i generar versió de producció a /server/public
-
+/*
 import regeneratorRuntime from "regenerator-runtime";
-
+*/
 
 //const url = "http://localhost:5000/api/posts";
 const url = "http://localhost:5000/api/cyclists";
@@ -43,7 +42,10 @@ class cyclistModel {
         },
       })
         .then((response) => response.json())
-        .then((json) => console.log(json));
+        .then((json) => {
+          //refresca
+          this.getCyclists();
+        });
     } catch (error) {
       console.error("Error en addCyclist:", error);
     }
@@ -53,7 +55,11 @@ class cyclistModel {
     try {
       fetch(url + "/delete/" + id, {
         method: "DELETE",
-      });
+      })
+        .then((json) => {
+          //refresca
+          this.getCyclists();
+        });
     } catch (error) {
       console.error("Error en deleteCyclist:", error);
     }
@@ -68,7 +74,10 @@ class cyclistModel {
 function mostraResultats(data) {
   let afegirAqui = document.getElementById("afegirAqui");
 
-console.log(data)
+  //buida
+  afegirAqui.innerHTML = "";
+
+  console.log(data);
 
   data.forEach((c) => {
     let tr = document.createElement("tr");
@@ -85,7 +94,7 @@ console.log(data)
     // Botó Delete
     let boto = document.createElement("button");
     boto.innerHTML = "X";
-    boto.setAttribute('onclick', `cyclistModel.deleteCyclist('${c._id}')`);
+    boto.setAttribute("onclick", `cyclistModel.deleteCyclist('${c._id}')`);
     th.appendChild(boto);
   });
 }
@@ -99,6 +108,9 @@ window.onload = function () {
       weight: 100,
       height: 100,
     });
+
+    //refresca
+    cyclistModel.getCyclists();
   });
 
   console.log("Iniciant...");

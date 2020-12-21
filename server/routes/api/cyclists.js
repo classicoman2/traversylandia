@@ -10,10 +10,22 @@ const cyclistModel = require('../../models/cyclistModel');
  * Get All
  */
 router.get('/', async (req, res) => {
-  const foods = await cyclistModel.find({});
-
+  const cyclists = await cyclistModel.find({});
   try {
-    res.send(foods);
+    res.send(cyclists);
+  } catch (err) {
+    res.status(500).send(err);
+  }
+});
+
+
+/**
+ * Get by Name
+ */
+router.get('/:name', async (req, res) => {
+  const cyclist = await cyclistModel.findByName(req.params.name);
+  try {
+    res.send(cyclist);
   } catch (err) {
     res.status(500).send(err);
   }
