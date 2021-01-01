@@ -6,16 +6,13 @@
 // només en PRODUCCIO HEROKU
 import regeneratorRuntime from "regenerator-runtime";
 
-// PRODUCCIO HEROKU
+// PRODUCCIO HEROKU  - xtoni
 const mode = "produccio";
 //const mode = "development";
 
-let url = "api/cyclists";
+let url = (mode == "produccio")  ?  window.location.href  :   "http://localhost:5000/"
+url += "api/cyclists";
 
-
-
-url += (mode == "produccio")  ?  window.location.href  :   "http://localhost:5000/"
-  
 console.log(url)
 
 class cyclistModel {
