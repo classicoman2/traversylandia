@@ -2,16 +2,26 @@
 
 //Necessari en executar Gulp i generar versió de producció a /server/public
 
-//import regeneratorRuntime from "regenerator-runtime";
 
+// només en PRODUCCIO HEROKU
+import regeneratorRuntime from "regenerator-runtime";
 
-const url = "http://localhost:5000/api/cyclists";
+// PRODUCCIO HEROKU
+const mode = "produccio";
+//const mode = "development";
+
+const url = "/api/cyclists";
+
+  console.log(window.location.href)
+
+url += (mode === "produccio")  ?  window.location.href  :   "http://localhost:5000"
+  
 
 class cyclistModel {
   /**
    * Get all cyclists
    */
-  static async getCyclists() {
+  static async getCyclists() {  
     try {
       const res = await fetch(url);
       const data = await res.json();
