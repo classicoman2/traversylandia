@@ -10,11 +10,11 @@ import regeneratorRuntime from "regenerator-runtime";
 const mode = "produccio";
 //const mode = "development";
 
-let url = "/api/cyclists";
+let url = "api/cyclists";
 
   console.log(window.location.href)
 
-url += (mode === "produccio")  ?  window.location.href  :   "http://localhost:5000"
+url += (mode === "produccio")  ?  window.location.href  :   "http://localhost:5000/"
   
 
 class cyclistModel {
