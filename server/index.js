@@ -1,8 +1,11 @@
 const express = require("express");
 const app = express();
 
+const path = require("path");
+
+
 //Carrega variables entorn de fitxer .env
-require('dotenv').config();
+require("dotenv").config();
 
 //Per evitar l'error de CORS en fer peticions des d'un altre servidor
 const cors = require("cors");
@@ -23,15 +26,12 @@ app.use(bodyParser.json());
 app.use(cors());
 
 // Rutes de la API
-/*
-const posts = require('./routes/api/posts');
-app.use('/api/posts', posts);
-*/
 const cyclists = require("./routes/api/cyclists");
 //En cas de ruta iniciada amb  /api/cyclists, la ruta completa la processarà el fitxer superior
 app.use("/api/cyclists", cyclists);
 
 // PRODUCTION
+//xtoni  -> cal definir la var entorn  NODE_END  en .env
 if (process.env.NODE_ENV === "production") {
   //Static folder que hem creat en fer   npm run build
   app.use(express.static(__dirname + "/public/"));
@@ -48,7 +48,7 @@ if (process.env.NODE_ENV === "production") {
 const port = process.env.PORT || 5000;
 app.listen(port, () => {
   console.log(`Servidor iniciat a http://localhost:${port}`);
-  console.log(process.env.MONGOATLAS_CREDENTIALS)
+  console.log(process.env.MONGOATLAS_CREDENTIALS);
 });
 
 // Base de dades 'uci_database'
