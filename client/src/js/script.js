@@ -12,10 +12,11 @@ const mode = "produccio";
 
 let url = "api/cyclists";
 
-  console.log(window.location.href)
 
-url += (mode === "produccio")  ?  window.location.href  :   "http://localhost:5000/"
+
+url += (mode == "produccio")  ?  window.location.href  :   "http://localhost:5000/"
   
+console.log(url)
 
 class cyclistModel {
   /**
