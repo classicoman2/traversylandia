@@ -10,7 +10,7 @@ import regeneratorRuntime from "regenerator-runtime";
 const mode = "produccio";
 //const mode = "development";
 
-const url = "/api/cyclists";
+let url = "/api/cyclists";
 
   console.log(window.location.href)
 
