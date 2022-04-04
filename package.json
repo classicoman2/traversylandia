@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/classicoman2/traversylandia#readme",
   "dependencies": {
-    "axios": "^0.20.0",
+    "axios": "^0.26.1",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
@@ -41,7 +41,7 @@
     "babel-preset-stage-0": "^6.24.1",
     "babelify": "^10.0.0",
     "browserify": "^17.0.0",
-    "cssnano": "^4.1.10",
+    "cssnano": "^5.1.7",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-htmlmin": "^5.0.1",

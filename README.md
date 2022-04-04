@@ -1,7 +1,6 @@
 # traversylandia
-
+- Data darrera modificacio: 4 Des 2020
 - Data inici: 15 Juny 2020
-- Data darrera mod: 20 Des 2020
 - Descripció: Full stack application emprant Javascript asíncron (Fetch) i Express.js, ,amb desplegament a Heroku i Atlas MongoDB.
 - Notes:
   - Després de fer canvis, per desplegar fer `git push heroku master` i `heroku open`
@@ -9,20 +8,16 @@
 
 
 ## TODO
-
 - [ ] :bug: En desplegament, no esborra perquè no agafa atribut `onclick` en HTML --> afegir dinàmicament amb `addEventListener()` en crear el llistat.
 - [ ] Completar el formulari
 - [ ] Falta UPDATE en el CRUD
 - [x] Emprar REST CLIENT (extensió de vscode) per guardar en un fitxer `.rest` les peticions a API
 - [ ] Investigar els [Schema](https://mongoosejs.com/docs/guide.html#statics) de _Mongoose_
 
-
 ## MongoDB
-
 La _Collection_ que estic emprant se diu uci_database.cyclists (uci_database és la BDD) i està allotjada [aqui](https://cloud.mongodb.com/)
 
 ### Atlas MongoDB
-
 1. Iniciar sessió a MongoDB Atlas
 2. Crear un cluster i un usuari de base de dades (_dbUser_)
 3. Crear un conexió
