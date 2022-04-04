@@ -50,7 +50,7 @@ if (process.env.NODE_ENV === 'production') {
  */
 
 // Iniciam el servidor
-const port = process.env.PORT || 5000
+const port = process.env.PORT || 80
 app.listen(port, () => {
   console.log(`Servidor iniciat a http://localhost:${port}`)
 })
