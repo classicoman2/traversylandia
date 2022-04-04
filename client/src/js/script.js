@@ -5,8 +5,8 @@ import regeneratorRuntime from "regenerator-runtime";
 alert(window.location.href)
 
 // PRODUCCIO HEROKU  - xtoni
-//const mode = "produccio";
-const mode = "development";
+const mode = "produccio";
+//const mode = "development";
 
 let url = (mode == "produccio")  ?  window.location.href  :   "http://localhost:5000/"
 url += "api/cyclists";
