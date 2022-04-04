@@ -1,16 +1,17 @@
 const express = require('express');
 const router = express();
-const mongodb = require('mongodb');
-const mongoose = require('mongoose');
 
-// Model creat a /models/cyclist.js  -- xtoni
 const cyclistModel = require('../../models/cyclistModel');
 
 /**
  * Get All
  */
 router.get('/', async (req, res) => {
+
+  console.log("get cyclists")
+
   const cyclists = await cyclistModel.find({});
+  
   try {
     res.send(cyclists);
   } catch (err) {

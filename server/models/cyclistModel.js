@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose')
 
 // xtoni Que és Schema?
 const CyclistSchema = new mongoose.Schema({
@@ -7,7 +7,7 @@ const CyclistSchema = new mongoose.Schema({
     required: true,
     trim: true,
     validate(value) {
-      if (value == "") throw new Error("El camp text no pot estar buid");
+      if (value == '') throw new Error('El camp text no pot estar buid')
     },
   },
   birth_date: {
@@ -15,7 +15,7 @@ const CyclistSchema = new mongoose.Schema({
     required: true,
     trim: true,
     validate(value) {
-      if (value == "") throw new Error("El camp text no pot estar buid");
+      if (value == '') throw new Error('El camp text no pot estar buid')
     },
   },
   weight: {
@@ -23,7 +23,7 @@ const CyclistSchema = new mongoose.Schema({
     required: true,
     trim: true,
     validate(value) {
-      if (value == "") throw new Error("El camp text no pot estar buid");
+      if (value == '') throw new Error('El camp text no pot estar buid')
     },
   },
   height: {
@@ -31,23 +31,22 @@ const CyclistSchema = new mongoose.Schema({
     required: true,
     trim: true,
     validate(value) {
-      if (value == "") throw new Error("El camp text no pot estar buid");
+      if (value == '') throw new Error('El camp text no pot estar buid')
     },
   },
-});
+})
 
 /**
  * Mètode que he creat jo, seguint  https://mongoosejs.com/docs/guide.html#statics
  * Assigns a function to the "statics" object of an Schema
- * 
+ *
  * @param {string} name  Expressió regular a buscar
  */
-CyclistSchema.statics.findByName = function(name) {
-  return this.find({ name: new RegExp(name, 'i') });
-};
+CyclistSchema.statics.findByName = function (name) {
+  return this.find({ name: new RegExp(name, 'i') })
+}
 
-
-const Cyclist = mongoose.model("Cyclist", CyclistSchema);
+const Cyclist = mongoose.model('Cyclist', CyclistSchema)
 
 //exports
-module.exports = Cyclist;
+module.exports = Cyclist

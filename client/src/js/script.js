@@ -1,14 +1,10 @@
-// ECMAScript 2015
-
-//Necessari en executar Gulp i generar versió de producció a /server/public
-
 
 // només en PRODUCCIO HEROKU
-import regeneratorRuntime from "regenerator-runtime";
+//import regeneratorRuntime from "regenerator-runtime";
 
 // PRODUCCIO HEROKU  - xtoni
-const mode = "produccio";
-//const mode = "development";
+//const mode = "produccio";
+const mode = "development";
 
 let url = (mode == "produccio")  ?  window.location.href  :   "http://localhost:5000/"
 url += "api/cyclists";
@@ -21,6 +17,8 @@ class cyclistModel {
    */
   static async getCyclists() {  
     try {
+console.log("url"+url)
+
       const res = await fetch(url);
       const data = await res.json();
       mostraResultats(data);

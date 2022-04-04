@@ -11,15 +11,15 @@
 - [ ] :bug: En desplegament, no esborra perquè no agafa atribut `onclick` en HTML --> afegir dinàmicament amb `addEventListener()` en crear el llistat.
 - [ ] Completar el formulari
 - [ ] Falta UPDATE en el CRUD
-- [x] Emprar REST CLIENT (extensió de vscode) per guardar en un fitxer `.rest` les peticions a API
+- [x] Emprar REST CLIENT per guardar en un fitxer `.rest` les peticions a API
 - [ ] Investigar els [Schema](https://mongoosejs.com/docs/guide.html#statics) de _Mongoose_
 
 ## MongoDB
-La _Collection_ que estic emprant se diu uci_database.cyclists (uci_database és la BDD) i està allotjada [aqui](https://cloud.mongodb.com/)
+La _Collection_ que estic emprant es diu uci_database.cyclists (uci_database és la BDD) i està allotjada [aqui](https://cloud.mongodb.com/)
 
 ### Atlas MongoDB
-1. Iniciar sessió a MongoDB Atlas
-2. Crear un cluster i un usuari de base de dades (_dbUser_)
+1. Iniciar sessió amb Gmail
+2. Crear un cluster i usuari de base de dades (_dbUser_)
 3. Crear un conexió
   - Des de la pantalla de CLUSTER, espitja el botó Connexió 
   - Tria l'opció 2, _Connect with my Application_ o algo així. 
@@ -27,26 +27,17 @@ La _Collection_ que estic emprant se diu uci_database.cyclists (uci_database és
 
     `mongodb+srv://<elmeusuari>:<elmeuPassword>@cluster0-tuhp5.mongodb.net/<labasededades>?retryWrites=true&w=majority`
 
-4. Les dades sensibles del _token_ estan guardades en fitxer .env de variables d'entorn (gitignore)
-5. Creades la database `uci_database` i la Collection `cyclists` des de COLLECTIONS
+4. Les dades sensibles del _token_ estan guardades en fitxer .env de variables d'entorn (gitignore). El fitxer .env serà, per exemple, el meu cas:
+```bash
+NODE_ENV=development
+USER=dbUser
+PASSWORD=aqui_la_meva_password
+```
 
 ## Peticions a Rest API
+Guardades  en fitxer `proves_api.rest` - emprant extensió REST CLIENT de vscode. No estaria de més tenir una collection a Postman també
 
-Estan emmagatzamades en fitxer `proves_api.rest` - emprant extensió REST CLIENT de vscode.
-
-## Desplegaments local i remot, seguretat.
-
-### Local
-
-- Front. 
-  - `gulp build` compila la versió de producció del front en `/server/public`
-
-- Back.
-  - Dev:   `npm run dev` - empra `nodemon`
-  - Prod:  `npm run start` 
-
-### Seguretat 
-
+## Seguretat 
 En desplegar a Heroku, si volem que la petició a la API funcioni:
 - Entrar a Atlas, a l'opció _Network Access_ i afegir a la _IP Whitelist_ el següent: `0.0.0.0/0` que vol dir que qualsevol hi pot accedir. [Accés](https://cloud.mongodb.com/v2/5ee9d0575a47887e5979df91#security/network/whitelist)
 - Entrar a Heroku. anar al Desplegament, clicar en _Settings_ i a sota, botó _Reveal Config Vars_ i afegir `MONGODB_URL` i posar el token especificat més adalt en aquest document. [Accés](https://dashboard.heroku.com/apps/agile-retreat-26891/settings)
