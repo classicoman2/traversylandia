@@ -1,6 +1,8 @@
 
 // només en PRODUCCIO HEROKU
-//import regeneratorRuntime from "regenerator-runtime";
+import regeneratorRuntime from "regenerator-runtime";
+
+alert(window.location.href)
 
 // PRODUCCIO HEROKU  - xtoni
 //const mode = "produccio";
